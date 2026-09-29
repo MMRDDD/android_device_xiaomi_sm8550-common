@@ -140,7 +140,7 @@ BOARD_XIAOMI_DYNAMIC_PARTITIONS_SIZE := 9659482112 # (BOARD_SUPER_PARTITION_SIZE
 BOARD_SUPER_PARTITION_GROUPS := xiaomi_dynamic_partitions
 
 $(foreach p, $(call to-upper, $(XIAOMI_SSI_PARTITIONS)), \
-    $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := ext4))
+    $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := erofs))
 
 $(foreach p, $(call to-upper, $(XIAOMI_TREBLE_PARTITIONS)), \
     $(eval BOARD_$(p)IMAGE_FILE_SYSTEM_TYPE := erofs))
